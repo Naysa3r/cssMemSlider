@@ -33,15 +33,24 @@ body {
     /* overflow-x: scroll; */
 }
 
+.frame {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}
+
 .img {
     margin: 0 auto;
-    height: 100%;
+    justify-self: center;
     object-fit: contain;
 }
 
 .img-wrapper {
     margin: 0 auto;
-    width: 100%;
+    height: 100%;
+    width: calc(900px - 15px * 2);
+    display: flex;
+    justify-content: center;
 }
 
 .title {
