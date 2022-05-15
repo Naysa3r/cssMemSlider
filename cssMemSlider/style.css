@@ -30,13 +30,21 @@ body {
     grid-area: AREA;
     overflow: hidden;
     display: flex;
-    /* overflow-x: scroll; */
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.mainframe::-webkit-scrollbar {
+    display: none;
 }
 
 .frame {
     display: flex;
     justify-content: center;
     height: 500px;
+    scroll-snap-align: start;
+
 }
 
 .img {
