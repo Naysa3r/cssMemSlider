@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
+input {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     box-sizing: border-box;
     margin: 0;
@@ -44,7 +49,7 @@ body {
     justify-content: center;
     height: 500px;
     scroll-snap-align: start;
-
+    transition: margin 1000ms ease-in-out;
 }
 
 .img {
@@ -70,6 +75,8 @@ body {
     justify-content: flex-end;
     padding: 0 24px;
     gap: 12px;
+    align-self: center;
+    user-select: none;
 }
 
 .button {
@@ -80,12 +87,86 @@ body {
     border-radius: 15px;
     cursor: pointer;
     border: 1px solid #000000;
+    display: none;
 }
 
-.button:hover {
+.radio-wrapper {
+    display: flex;
+    height: 15px;
+    width: 15px;
+    background-color: #ffffff;
+    border: 2px solid black;
+    border-radius: 50%;
+    justify-content: center;
+    cursor: pointer;
+}
+.radio-wrapper input {
+    display: none;
+}
+.radio-wrapper .checkmark {
+    height: 15px;
+    width: 15px;
+    background-color: #FFEB3C;
+    border-radius: 50%;
+    display: none;
+}
+.radio-wrapper input:checked + .checkmark {
+    display: inline-block;
+}
+
+#input1:checked ~ .buttons  [for="input1"]  .checkmark {
+    display: inline-block;
+}
+#input2:checked ~ .buttons  [for="input2"]  .checkmark {
+    display: inline-block;
+}
+#input3:checked ~ .buttons  [for="input3"]  .checkmark {
+    display: inline-block;
+}
+#input4:checked ~ .buttons  [for="input4"]  .checkmark {
+    display: inline-block;
+}
+#input5:checked ~ .buttons  [for="input5"]  .checkmark {
+    display: inline-block;
+}
+
+
+#input1:checked ~ .mainframe .frame {
+    margin-left: 0;
+}
+#input2:checked ~ .mainframe .frame {
+    margin-left: -100%;
+}
+#input3:checked ~ .mainframe .frame {
+    margin-left: -200%;
+}
+#input4:checked ~ .mainframe .frame {
+    margin-left: -300%;
+}
+#input5:checked ~ .mainframe .frame {
+    margin-left: -400%;
+}
+
+
+.radio-wrapper:hover {
     background-color: #ddd692;
+}
+.radio-wrapper:active {
+    background: #999;
+}
+.radio-wrapper:focus {
+    background: #999;
 }
 
 .button--active {
     background-color: #FFEB3C;
 }
+
+
+.title {
+    display: none;
+}
+.buttons-link {
+    display: inline-block;
+}
+
