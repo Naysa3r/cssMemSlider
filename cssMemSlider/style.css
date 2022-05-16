@@ -66,8 +66,16 @@ body {
     justify-content: center;
 }
 
+.titles {
+    transition: opacity 1000ms ease-in-out;
+}
 .title {
     padding: 0 24px;
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    position: absolute;
 }
 
 .buttons {
@@ -148,6 +156,33 @@ body {
 }
 
 
+#input1:checked ~ .titles  .title[for="input1"]  {
+    display: inline;
+    visibility: visible;
+    opacity: 1;
+}
+#input2:checked ~ .titles  .title[for="input2"]  {
+    display: inline;
+    opacity: 1;
+    visibility: visible;
+}
+#input3:checked ~ .titles  .title[for="input3"]  {
+    display: inline;
+    opacity: 1;
+    visibility: visible;
+}
+#input4:checked ~ .titles  .title[for="input4"]  {
+    display: inline;
+    opacity: 1;
+    visibility: visible;
+}
+#input5:checked ~ .titles  .title[for="input5"]  {
+    display: inline;
+    opacity: 1;
+    visibility: visible;
+}
+
+
 .radio-wrapper:hover {
     background-color: #ddd692;
 }
@@ -162,11 +197,10 @@ body {
     background-color: #FFEB3C;
 }
 
-
-.title {
-    display: none;
-}
 .buttons-link {
     display: inline-block;
 }
 
+@media (max-width: 640px) {
+    
+}
