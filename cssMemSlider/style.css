@@ -203,4 +203,56 @@ body {
 
 @media (max-width: 640px) {
     
+    .grid-wrapper {
+        margin: 50px auto 0;
+        height: 100%;
+        max-width: 600px;
+        display: grid;
+        grid-template-areas: "AREA";
+        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .mainframe {
+        margin: 0 auto;
+        padding: 10px;
+        width: calc(100% - 30px);
+        height: 300px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border: solid 5px rgba(255, 255, 255, 0.8); 
+        grid-area: AREA;
+        overflow: hidden;
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+    .frame {
+        display: flex;
+        justify-content: center;
+        height: 300px;
+        scroll-snap-align: start;
+        transition: margin 1000ms ease-in-out;
+    }
+    .img-wrapper {
+        margin: 0 auto;
+        height: 100%;
+        width: calc(600px - 15px * 2);
+        display: flex;
+        justify-content: center;
+    }
+
+    .titles {
+        transition: opacity 1000ms ease-in-out;
+        height: 1em;
+        display: flex;
+        justify-content: center;
+    }
+    .title {
+        margin: 0 auto;
+    }
+    .buttons {
+        justify-content: center;
+    }
 }
