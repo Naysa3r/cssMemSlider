@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>cssMemSlider</title>
+</head>
+<body>
+    <div class="grid-wrapper">
+
+        <input type="radio" class="button" name="meme" id="input1" value="meme1" checked></input>
+        <input type="radio" class="button" name="meme" id="input2" value="meme2"></input>
+        <input type="radio" class="button" name="meme" id="input3" value="meme3"></input>
+        <input type="radio" class="button" name="meme" id="input4" value="meme4"></input>
+        <input type="radio" class="button" name="meme" id="input5" value="meme5"></input>
+
+        <div class="mainframe">
+            <div class="frame">
+                <div class="img-wrapper" id="meme1">
+                    <img class="img" src="./src/meme1.png" alt="meme"></img>
+                </div>
+                <div class="img-wrapper" id="meme2">
+                    <img class="img" src="./src/meme2.png" alt="meme"></img>
+                </div>
+                <div class="img-wrapper" id="meme3">
+                    <img class="img" src="./src/meme3.png" alt="meme"></img>
+                </div>
+                <div class="img-wrapper" id="meme4">
+                    <img class="img" src="./src/meme4.png" alt="meme"></img>
+                </div>
+                <div class="img-wrapper" id="meme5">
+                    <img class="img" src="./src/meme5.png" alt="meme"></img>
+                </div>
+            </div>
+        </div>
+        
+        <div class="titles">
+            <label class="title" for="input1">Did you recognize yourself? 😄</label>
+            <label class="title" for="input2">So true 😁</label>
+            <label class="title" for="input3">Favorite browser here 😆</label>
+            <label class="title" for="input4">And OS is my tree 🌳</label>
+            <label class="title" for="input5">Only geniuses know how to improvise 😅</label>
+        </div>
+        
+        <label class="buttons">
+
+            <label for="input1" class="radio-wrapper">
+                <span class="checkmark"></span>
+            </label>
+
+            <label for="input2" class="radio-wrapper" href="#meme2">
+                <span class="checkmark"></span>
+            </label>
+
+            <label for="input3" class="radio-wrapper" href="#meme3">
+                <span class="checkmark"></span>
+            </label>
+
+            <label for="input4" class="radio-wrapper" href="#meme4">
+                <span class="checkmark"></span>
+            </label>
+            
+            <label for="input5" class="radio-wrapper" href="#meme5">
+                <span class="checkmark"></span>
+            </label>
+
+        </label>
+    </div>
+</body>
+</html>

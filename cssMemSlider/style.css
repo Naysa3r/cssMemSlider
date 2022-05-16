@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+input {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #2E2E2E;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.grid-wrapper {
+    margin: 100px auto 0;
+    height: 100%;
+    max-width: 900px;
+    display: grid;
+    grid-template-areas: "AREA AREA";
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+
+.mainframe {
+    margin: 0 auto;
+    padding: 10px;
+    width: calc(100% - 30px);
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: solid 5px rgba(255, 255, 255, 0.8); 
+    grid-area: AREA;
+    overflow: hidden;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.mainframe::-webkit-scrollbar {
+    display: none;
+}
+
+.frame {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    scroll-snap-align: start;
+    transition: margin 1000ms ease-in-out;
+}
+
+.img {
+    margin: 0 auto;
+    justify-self: center;
+    object-fit: contain;
+}
+
+.img-wrapper {
+    margin: 0 auto;
+    height: 100%;
+    width: calc(900px - 15px * 2);
+    display: flex;
+    justify-content: center;
+}
+
+.titles {
+    transition: opacity 1000ms ease-in-out;
+}
+.title {
+    padding: 0 24px;
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    position: absolute;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 24px;
+    gap: 12px;
+    align-self: center;
+    user-select: none;
+}
+
+.button {
+    display: block;
+    height: 15px;
+    width: 15px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 1px solid #000000;
+    display: none;
+}
+
+.radio-wrapper {
+    display: flex;
+    height: 15px;
+    width: 15px;
+    background-color: #ffffff;
+    border: 2px solid black;
+    border-radius: 50%;
+    justify-content: center;
+    cursor: pointer;
+}
+.radio-wrapper input {
+    display: none;
+}
+.radio-wrapper .checkmark {
+    height: 15px;
+    width: 15px;
+    background-color: #FFEB3C;
+    border-radius: 50%;
+    display: none;
+}
+.radio-wrapper input:checked + .checkmark {
+    display: inline-block;
+}
+
+#input1:checked ~ .buttons  [for="input1"]  .checkmark {
+    display: inline-block;
+}
+#input2:checked ~ .buttons  [for="input2"]  .checkmark {
+    display: inline-block;
+}
+#input3:checked ~ .buttons  [for="input3"]  .checkmark {
+    display: inline-block;
+}
+#input4:checked ~ .buttons  [for="input4"]  .checkmark {
+    display: inline-block;
+}
+#input5:checked ~ .buttons  [for="input5"]  .checkmark {
+    display: inline-block;
+}
+
+
+#input1:checked ~ .mainframe .frame {
+    margin-left: 0;
+}
+#input2:checked ~ .mainframe .frame {
+    margin-left: -100%;
+}
+#input3:checked ~ .mainframe .frame {
+    margin-left: -200%;
+}
+#input4:checked ~ .mainframe .frame {
+    margin-left: -300%;
+}
+#input5:checked ~ .mainframe .frame {
+    margin-left: -400%;
+}
+
+
+#input1:checked ~ .titles  .title[for="input1"]  {
+    display: inline;
+    visibility: visible;
+    opacity: 1;
+}
+#input2:checked ~ .titles  .title[for="input2"]  {
+    display: inline;
+    opacity: 1;
+    visibility: visible;
+}
+#input3:checked ~ .titles  .title[for="input3"]  {
+    display: inline;
+    opacity: 1;
+    visibility: visible;
+}
+#input4:checked ~ .titles  .title[for="input4"]  {
+    display: inline;
+    opacity: 1;
+    visibility: visible;
+}
+#input5:checked ~ .titles  .title[for="input5"]  {
+    display: inline;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.radio-wrapper:hover {
+    background-color: #ddd692;
+}
+.radio-wrapper:active {
+    background: #999;
+}
+.radio-wrapper:focus {
+    background: #999;
+}
+
+.button--active {
+    background-color: #FFEB3C;
+}
+
+.buttons-link {
+    display: inline-block;
+}
+
+@media (max-width: 640px) {
+    
+    .grid-wrapper {
+        margin: 50px auto 0;
+        height: 100%;
+        max-width: 600px;
+        display: grid;
+        grid-template-areas: "AREA";
+        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .mainframe {
+        margin: 0 auto;
+        padding: 10px;
+        width: calc(100% - 30px);
+        height: 300px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border: solid 5px rgba(255, 255, 255, 0.8); 
+        grid-area: AREA;
+        overflow: hidden;
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+    .frame {
+        display: flex;
+        justify-content: center;
+        height: 300px;
+        scroll-snap-align: start;
+        transition: margin 1000ms ease-in-out;
+    }
+    .img-wrapper {
+        margin: 0 auto;
+        height: 100%;
+        width: calc(600px - 15px * 2);
+        display: flex;
+        justify-content: center;
+    }
+
+    .titles {
+        transition: opacity 1000ms ease-in-out;
+        height: 1em;
+        display: flex;
+        justify-content: center;
+    }
+    .title {
+        margin: 0 auto;
+    }
+    .buttons {
+        justify-content: center;
+    }
+}
